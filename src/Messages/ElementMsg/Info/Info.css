@@ -1,0 +1,18 @@
+.Info_class
+{
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    top: 22.5%;
+    bottom: 0px;
+    height: 70%;
+    
+    width: 30%;
+    left: 70.5%;
+    background-color: red;
+    color: white;
+    background-color: rgba(36, 35, 34,0.6);
+    box-shadow: 0px 0px 2px gray;
+    border-radius: 15px;
+}

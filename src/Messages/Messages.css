@@ -1,0 +1,124 @@
+.div-class1{
+    position: relative;
+    margin: 0 0 0 0%;
+    width: 100%;
+    height:100%;
+    background-color: rgba(255, 228, 196,0.5);
+    box-shadow: 0px 0px 2px gray;
+    color: white;
+    /* z-index: -5; */
+}
+
+.Element-class img{
+    text-align: left;
+    width: 50px; 
+    left:100px;
+    height: 50px; 
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 5px;
+    
+}
+.Element-class .name-class{
+    
+    margin-top: 10px;
+    color: black;
+    margin-left: 10px;
+}
+.Element-class .date
+{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: black;
+}
+.Element-class .mesg{
+    color: black;
+    position: absolute;
+    margin-top: 35px;
+    opacity: 0.6;
+    font-size:small;
+    margin-left: 65px;
+}
+
+.div-class1 .Appearmsg .Element-class
+{
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 80px;
+    border-radius:20px;
+    background-color:rgba(32, 90, 216, 0.5);
+    padding: 0px;
+    text-align: center;
+    margin-left: 15px;
+    
+
+}
+.title-chat
+{
+    width:100%;
+
+    height:10%;
+    text-align: center;
+    align-items: center center;
+    justify-content: center center;
+}
+/* .title-chat input{
+    position:relative;
+    margin: 4% 0 0 0;
+    height:70%;
+    width: 85%;
+
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: rgb(241, 239, 239);
+    padding-left: 35px;
+    font-size: 18px;
+    color:white;
+
+
+} */
+
+
+.title-chat input {
+    position:relative;
+    margin: 3% 2% 0 0;
+    height:30%;
+    width: 80%;
+
+
+  }
+
+
+  .title-chat input {
+    color: #050505;
+    font-size: 1rem;
+    line-height: 1;
+    border-style: none;
+    outline: none;
+    padding: 0.8em 1em;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#eeeaea, #f7ecec), linear-gradient(120deg, rgb(252, 252, 249) 0%, rgb(0, 140, 255) 50%, rgb(87, 59, 8) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.8em;
+    transition: background-position 0.8s ease-out;
+  }
+  .title-chat input:hover {
+    background-position: 100% 0;
+  }
+  .title-chat input:focus {
+    outline: 2px dashed #532507;
+    outline-offset: 0.5em;
+  }
+.div-class1 .Appearmsg .Element-class:hover
+
+{
+    z-index: 10;
+    cursor:pointer;
+    transition: all 0.4s ease;
+
+}

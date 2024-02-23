@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Kikia';
+    src: local('Kikia'), url(../../fonts/kikia.ttf) format('truetype');
+  }
+
+  
+
+.Home{ 
+     display: grid;
+     flex-wrap: wrap;
+    grid-template-columns: 0.1fr 4.6fr 0.1fr;
+    grid-template-rows: 0.5fr 2.3fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". Header ."
+      ". All ."
+      ". Footer .";
+      background-image: url("./assets/monument.png");
+
+      /* Additional background styles */
+      background-size: cover; /* Cover the entire viewport */
+      position: absolute;
+      width:100%;
+      height: 100%;
+  }
+  
+
+  .Profile {  
+    display: grid;
+    grid-template-columns: 1.6fr 0.4fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "ProfileBis ChatBar";
+    grid-area: All;
+  }
+
+
+
+  .Chat {  
+    grid-template-areas:
+    "sidebar Allchat";
+    display: grid;
+    grid-template-columns: 0.1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: All;
+  }
+  
+  .Header { 
+    grid-area: Header;
+    margin: 2% 0% 0% 0%;
+}
+  
+  .Footer { grid-area: Footer; }
+  

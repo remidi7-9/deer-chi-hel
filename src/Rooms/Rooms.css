@@ -1,0 +1,207 @@
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+.div-class{
+    position: relative;
+    height: 100%;
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 228, 196,0.5);
+    box-shadow: 0px 0px 2px gray;
+    border-radius: 15px;
+    color: white;
+    /* z-index: -5; */
+}
+
+.Element-class img{
+    text-align: left;
+    width: 50px; 
+    left:100px;
+    height: 50px; 
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 5px;
+    
+}
+.CreateChannel-class{
+    --c: rgba(32, 90, 216, 0.5);;
+    color:  #3b3b06;
+    font-size: 16px;
+    border: 0.2em solid var(--c);
+    border-color: #3b3b06;
+    border-radius: 0.7em;
+    width: 80%;
+    height: 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    align-items: center;
+    line-height: 3em;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+
+    transition: 0.5s;
+    margin: 2em;
+}
+.CreateChannel-class:visited{
+    text-decoration: none;
+    color:#fff;
+}
+.CreateChannel-class span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(69, 103, 179, 0.8);
+    transform: translateY(150%);
+    border-radius: 25%;
+    left: calc((var(--n) - 1) * 25%);
+    top: 100%;
+    transition: 0.1s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.CreateChannel-class:hover {
+    color: rgb(82, 74, 74);
+}
+
+.CreateChannel-class:hover span {
+    transform: translateY(0) scale(4);
+}
+
+.CreateChannel-class span:nth-child(1) {
+    --n: 1;
+}
+
+.CreateChannel-class span:nth-child(2) {
+    --n: 2;
+}
+
+.CreateChannel-class span:nth-child(3) {
+    --n: 3;
+}
+
+.CreateChannel-class span:nth-child(4) {
+    --n: 4;
+}
+
+.Element-class .name-class{
+    
+    margin-top: 10px;
+    color: black;
+    margin-left: 10px;
+}
+.Element-class .date
+{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: wheat;}
+.Element-class .mesg{
+    color: black;
+    position: absolute;
+    margin-top: 35px;
+    opacity: 0.6;
+    font-size:small;
+    margin-left: 65px;
+}
+.div-class .Appearmsg {
+    position: absolute;
+    max-height: 40%;
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.div-class .Appearmsg .Element-class
+{
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 80px;
+    border-radius:20px;
+    background-color:rgba(32, 90, 216, 0.5);
+    padding: 0px;
+    text-align: center;
+    margin-left: 15px;
+    
+    
+
+}
+.div-class .Appearmsg .Element-class:hover
+
+{
+    z-index: 10;
+    cursor:pointer;
+    transition: all 0.4s ease;
+
+}
+.title-chat
+{
+    margin-left: 1%;
+}
+.div-class .public_protected
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    max-height: 40%;
+    width: 100%;
+    top: 59%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.div-class .public_protected .line{
+
+    border: none;
+    border-top: 3px solid rgba(130,141,172,255); /* Adjust the color and width as needed */
+    height: 3px; 
+    width: 60%;
+    margin-left: 20%;
+}
+.JoinRoom{
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 60px;
+    border-radius:20px;
+    background-color:rgba(197, 193, 193, 0.5);
+    padding: 0px;
+    text-align: center;
+    margin-left: 15px;
+    color: black;
+}
+.button-chat{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    color: rgb(236, 224, 224);
+    border: none;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 50%;
+    margin: 4% 0 0 80%;
+    cursor: cell;
+    
+}
+.button-chat:hover{
+    background-color: rgba(0,0,0,0.9);
+
+}

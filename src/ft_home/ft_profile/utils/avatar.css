@@ -1,0 +1,229 @@
+:root {
+    --inset: 0.5vmin;
+    --color0:  rgba(32, 90, 216, 1);
+    --color1:rgb(235, 240, 250);
+    --duration: 7s;
+    --bgcolor0: rgba(32, 90, 216, 1);
+    --bgcolor1: rgba(32, 90, 216, 1);
+  }
+
+  .com 
+  {
+    position:relative;
+    width:40%;
+    height: 72%;
+    margin: 7% 0% 0% 5%;
+    display: grid;
+    place-items: center;
+    rotate: 45deg;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px black, 0 0 10px black;
+    filter: drop-shadow(0 0 10px var(--color0)) saturate(1);
+  }
+
+  .com .th {
+    inline-size: 100%;
+    block-size: 100%;
+    overflow: hidden;
+    clip-path: inset(var(--inset));
+  }
+  .com .th img {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    rotate: -45deg;
+    scale: 1.2;
+  }
+  .com::before {
+    content: '';
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    position: absolute;
+    background: repeating-conic-gradient(transparent, var(--color0) 25deg, var(--color1) 22.5deg, transparent 90deg);
+    animation: var(--duration) f linear infinite;
+    scale: 1.2;
+  }
+  @keyframes f {
+    0% {
+      rotate: 0;
+    }
+    100% {
+      rotate: 1turn;
+    }
+  }
+  @supports not (rotate: 0deg) {
+    .com {
+      transform: rotate(45deg);
+    }
+    .com .th img {
+      transform: rotate(-45deg) scale(1.2);
+    }
+    .com::before {
+      transform: scale(1.2);
+      animation-name: g;
+    }
+    @keyframes g {
+      0% {
+        transform: rotate(0) scale(1.2);
+      }
+      100% {
+        transform: rotate(1turn) scale(1.2);
+      }
+    }
+  }
+  
+.besideAvatar
+{
+    display: flex;
+    flex-direction: column;
+}
+.Playnow {
+    position: relative;
+    z-index: 1;
+    height: 25%;
+    width: 100%;
+    margin: 35% 0 0 50%;
+
+    background: transparent linear-gradient(to top left, #7f1210 0%, #7f1210 40%, #7f1210 100%);
+    border: 3px solid transparent;
+    border-image-source: linear-gradient(to top left,  #edb342 0%, #edb342 40%, #edb342 100%);
+    border-image-slice: 1;
+    transition: transform 0.25s;
+    letter-spacing: 0.2rem;
+    font-family: 'Kikia';
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:  #f3d293;
+    cursor:pointer;
+  }
+.Playnow::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 5px solid transparent;
+    opacity: 0;
+    pointer-events: none;
+    border-image-slice: 1;
+    z-index: -1;
+    background: transparent linear-gradient(to bottom left, rgba(249, 208, 129, 0.25) 10%, rgba(227, 2, 62, 0.25) 30%, rgba(49, 128, 135, 0.25) 90%);
+    border-image-source: linear-gradient(to top left,  #edb342 0%, #edb342 40%, #edb342 100%);    transition: opacity 1s;
+  }
+.Playnow:active {
+    transform: scale(0.96);
+  }
+.Playnow:active::before {
+    opacity: 1;
+  }
+.Playnow::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 5px solid transparent;
+    opacity: 0;
+    pointer-events: none;
+    border-image-slice: 1;
+    z-index: 0;
+    border-image-source: linear-gradient(to top left,  #edb342 0%, #edb342 40%, #edb342 100%);    transition: opacity 0.5s;
+  }
+.Playnow:hover::after {
+    opacity: 1;
+  }
+  
+  
+
+
+  .pong {
+    position:relative;
+	width: 50%;
+	height: 30%;
+    margin: 10% 0 0 50%;
+	position: relative;
+	border: solid #111216 2px;
+}
+
+.pong:after {
+	content: '';
+	display: block;
+	padding-top: 85%;
+}
+
+.pong-line {
+	width: 0;
+	height: 100%;
+	left: calc(50% - 2px);
+	position: absolute;
+	border-right: dashed 2px #111216;
+}
+
+.pong-paddle {
+	width: 3%;
+	height: 20%;
+	position: absolute;
+	background-color: #111216;
+}
+
+.pong-paddle-1 {
+	top: 40%;
+	left: 3%;
+	animation-name: paddle1;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes paddle1 {
+	0%   {top: 40%;}
+	50%	{top: 60%;}
+	100% {top: 40%;}
+}
+
+.pong-paddle-2 {
+	top: 10%;
+	right: 3%;
+	animation-name: paddle2;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-delay: -500ms;
+}
+
+@keyframes paddle2 {
+	0%   {top: 10%;}
+	50%	{top: 40%;}
+	100% {top: 10%;}
+}
+
+.pong-ball {
+	width: 3%;
+	height: 3%;
+	position: absolute;
+	top: 97%;
+	left: 65%;
+	background-color: #111216;
+	animation-name: pongBall;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: -500ms;
+}
+
+@keyframes pongBall {
+	0%   {top: 97%; left: 65%;}
+	25%  {top: 50%; left: 6%;}
+	50%  {top: 0; left: 45%;}
+	75%  {top: 40%; left: 92%;}
+	100% {top: 97%; left: 65%;}
+}

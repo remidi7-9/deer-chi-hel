@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'Kikia';
+  src: local('Kikia'), url(../../fonts/kikia.ttf) format('truetype');
+}
+  
+.Allauth {  
+  position: absolute;
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: 2.7fr 0.3fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Place"
+    "Neo";
+    background-image:url("./assets/build.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.Place { 
+  grid-area: Place;
+  position:relative;
+  width:100%;
+  height: 100%;
+  background-color: black;
+  z-index : -2;
+  display:grid;
+
+
+
+
+}
+.Place_ { 
+  grid-area: Place;
+  position:relative;
+  width:100%;
+  height: 100%;
+  background-color: black;
+  z-index : -2;
+  display:grid;
+  animation: sky 5s ease forwards;
+
+
+
+
+}
+
+    .diogenes
+    {
+      position: absolute;
+
+        overflow:hidden;
+        margin-top: -10vh;
+
+        width: 100%;
+        height: 100%;
+
+    } 
+    
+
+
+  .sun {
+    position: absolute;
+    z-index:-1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50%;
+    background: linear-gradient(#ff0, rgb(248, 232, 6));
+    box-shadow: 0 0 40px 6px rgb(238, 203, 2), 0 0 1500px 75px rgb(248, 252, 3);
+    animation: rise 5s ease forwards;
+
+  }
+  ._sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 50%;
+    top: 30%;
+    background: linear-gradient(#ff0, rgb(248, 232, 6));
+    box-shadow: 0 0 40px 6px rgb(238, 203, 2), 0 0 1500px 75px rgb(248, 252, 3);
+    animation: _rise 0.710s linear forwards;
+
+  }
+  @keyframes _rise {
+    0% {
+      top: 30%;
+    }
+    20% {
+      background: linear-gradient(#ff0, rgb(248, 232, 6));
+      box-shadow: 0 0 100px 20px rgb(238, 183, 2), 0 0 1500px 450px rgb(238, 183, 2);
+
+      
+      }
+      40% {
+        background: linear-gradient(rgb(247, 247, 85), rgb(252, 241, 91));        box-shadow: 0 0 200px 40px rgb(247, 247, 85), 0 0 1500px 650px rgb(247, 247, 85);
+
+
+      }
+      60% {
+        background: linear-gradient(rgb(247, 247, 132), rgb(250, 243, 153));        box-shadow: 0 0 400px 80px rgb(247, 247, 132), 0 0 1500px 800px rgb(247, 247, 132);
+
+      }
+     80% {
+      background: linear-gradient(rgb(250, 250, 193), rgb(248, 245, 197));      box-shadow: 0 0 800px 160px rgb(250, 250, 193), 0 0 1500px 1200px rgb(250, 250, 193);
+
+
+      }
+    100% {
+      background: linear-gradient(rgb(252, 252, 225), rgb(252, 251, 237));      box-shadow: 0 0 1600px 320px rgb(252, 252, 225), 0 0 1500px 1500px rgb(252, 252, 225);
+    }
+  }
+
+  @keyframes sky{
+
+
+    0% {
+        background-color: rgb(8, 8, 6);
+
+    }
+    15% {
+        background-color: rgb(82, 82, 75);
+    }
+    30% {
+        background-color: rgb(134, 134, 127);
+    }
+    50% {
+        background-color: rgb(190, 190, 176);
+    }
+    70% {
+        background-color: rgb(230, 230, 215);
+    }
+    100% {
+        background-color: rgb(245, 244, 234);
+    }
+  }
+  
+  @keyframes rise {
+    0% {
+      top: 100%;
+      opacity:0.2;
+    }
+    20% {
+        opacity:0.4;
+      }
+      40% {
+
+        opacity:0.6;
+      }
+      60% {
+
+        opacity:0.8;
+      }
+     80% {
+
+        opacity:0.9;
+      }
+    100% {
+      top: 30%;
+    }
+  }
+
+  .cloud
+  { z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 30%;
+      top:30%;
+      overflow: hidden;
+
+  }
+  .cloud1
+  {   z-index: -1;
+      position: absolute;
+      width:50%;
+      height: 50%;
+      left: 30%;
+      top:40%;
+      animation:animateCLoude 50s linear infinite;
+  }
+  .cloud2
+  {   z-index: -1;
+      position: absolute;
+      width:50%;
+      height: 50%;
+      left: 30%;
+      top:40%;
+      animation:animateCLoude 35s linear infinite;
+  }
+  .cloud3
+  {   z-index: -1;
+      position: absolute;
+      width:50%;
+      height: 50%;
+      animation:animateCLoude 80s linear infinite;
+  }
+  .cloud4
+  {   z-index: -1;
+      position: absolute;
+      width:50%;
+      height: 50%;
+      animation:animateCLoude 70s linear infinite;
+  }
+  
+  .cloud5
+  {   z-index: -1;
+      position: absolute;
+      width:50%;
+      height: 50%;
+      animation:animateCLoude 40s linear infinite;
+  }
+  
+  .cloud6
+  { z-index: -1;
+      position: absolute;
+      width:50%;
+      height: 50%;
+      animation:animateCLoude 80s linear infinite;
+  }
+  @keyframes animateCLoude {
+    0% {
+      transform: translateX(-100%) scale(1);
+    }
+    100% {
+      transform: translateX(400%) scale(1.2);
+  
+    }
+  }
+
+
+
+  :root {
+    --clr-neon: #eceff3;
+    --font-size: 10rem;
+  }
+  
+
+  .neon {    
+    z-index:1000;
+    position: absolute;
+    
+    font-size:150%;
+    color:rgb(247, 247, 245);
+    top:60%;
+    margin-left: 46%;
+    width: 15%;
+    height: 8%;
+    cursor: pointer;
+    border: var(--clr-neon) 0.120em solid;
+
+    place-items: center;
+    border-radius: 0.2em;
+    text-shadow: 
+      0 0 .20em #FFF7,
+      0 0 .20em var(--clr-neon);
+    box-shadow: 
+      inset 0 0 .5em var(--clr-neon),
+            0 0 .5em var(--clr-neon);
+  }
+  
+  
+.neon::before {
+  z-index:1;
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-neon);
+  transform: 
+    perspective(0.2em)
+    rotateX(10deg) 
+    scale(1.3, 0.40);
+  filter: blur(0.5em);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 100ms linear;
+}
+
+.neon::after {
+  z-index:1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-neon);
+  box-shadow: 0 0 5em var(--clr-neon);
+
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.Neo{
+  grid-area: Neo;
+  z-index: 0;
+  background-color: transparent;
+}
+
+.neon:hover::after {
+  z-index:1;
+  opacity: 1;
+}
+.neon:hover, .neon:focus {
+  z-index:1;
+  color: rgb(3, 3, 3);
+}
+.neon:hover::before {
+  z-index:1;
+  opacity: 0.8;
+}

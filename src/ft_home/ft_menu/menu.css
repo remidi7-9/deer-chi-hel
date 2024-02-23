@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Kikia';
+    src: local('Kikia'), url(../../../fonts/kikia.ttf) format('truetype');
+  }
+
+  .header {
+    position: relative;
+    background-color:  rgba(32, 90, 216, 0.5);
+    color: #fff;
+    padding: 0 2rem;
+    box-shadow: 0 0 80px rgba(130, 141, 172, 255);
+    height: 6rem;
+    display: flex;
+    margin: -1.5% 0% 0% 0%;
+    align-items: center;
+  } 
+.navbar 
+{
+  cursor:cell;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  
+}
+.navbar__link span
+{
+  color: #070707;
+  font-size: 25px;
+}
+.navbar__menu 
+{
+  
+  list-style-type: none;
+  position: relative;
+  display: flex;
+}
+
+.navbar__link 
+{
+  font-family:'Kikia';
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 18rem;
+  color: #fff;
+  transition: 250ms ease all;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 500ms ease all;
+}
+
+.navbar__item:hover {
+  background-color: #f0f0f0; 
+  color: #333; 
+}
+
+.navbar__item:hover .navbar__link {
+  /* Add styles for the link inside navbar__item on hover */
+  color: #333; /* Change text color on hover */
+  box-shadow: 0 0 20px rgb(241, 241, 241);
+
+}
+
+
+.navbar__item.active {
+  background-color: rgb(216, 4, 4); /* Change background color of selected item */
+}
+
+.navbar__link img {
+  width: 150px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  margin-right: 5px; /* Optional: Add some margin to separate the icon from the text */
+}
+
+.grid-container {
+  display: grid;
+  margin-top: 100px;
+  margin-left: 50px;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes avec largeur égale */
+  grid-template-rows: auto auto; /* Deux rangées */
+  grid-gap: 70px 150px; /* Espace de 20px verticalement, pas d'espace horizontalement */
+}
+
+.grid-item1, .grid-item2, .grid-item3 {
+    border-radius: 20px;
+    background-color: rgba(2,2,10,0.7)
+}
+
+.grid-item1 {
+  border: 1px solid rgba(130,141,172,255); /* Bordure pour la visualisation */
+  padding: 40px;
+  text-align: center;
+  width: 100%; /* Largeur maximale */
+  height: 250px; /* Hauteur */
+}
+
+.grid-item2{
+  border: 1px solid rgba(130,141,172,255);
+  padding: 40px;
+  text-align: center;
+  width: 80%; /* Largeur maximale */
+  height: 250px; /* Hauteur */
+}
+
+.grid-item3{
+
+  margin-left: 5%;
+  text-align: center;
+  width: 200%; /* Largeur maximale */
+  height: 250px; /* Hauteur */
+}
+
+.grid-item2 {
+  grid-column: 2; /* Cette colonne est dans la deuxième colonne */
+}
+
+.ball {
+  position: relative;
+  bottom: 50px;
+  left: calc(100% - 20px);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  animation: ball-move8234 3s ease-in-out 1s infinite alternate;
+}
+
+.ball::after {
+  position: absolute;
+  content: '';
+  top: 25px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.bar {
+  width: 200px;
+  height: 12.5px;
+  background: #695b3f;
+  border-radius: 30px;
+  transform: rotate(-15deg);
+  animation: up-down6123 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes up-down6123 {
+  from {
+    transform: rotate(-15deg);
+  }
+
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes ball-move8234 {
+  from {
+    left: calc(100% - 40px);
+    transform: rotate(360deg);
+  }
+
+  to {
+    left: calc(0% - 20px);
+    transform: rotate(0deg);
+  }
+}
+
+.Logo
+{
+  font-family: 'Kikia';
+  font-size: 20px ;
+
+}

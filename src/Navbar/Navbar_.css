@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "KIKIA";
+    src: local('KIKIA'), url(./dalek_pinpoint/DalekPinpointBold.ttf) format('truetype');
+}
+
+.Chat {  
+    position:relative;
+    background-color: rgba(255, 228, 196,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+
+  }
+
+
+
+.sidebar{
+    
+    position: relative;
+    display:grid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(32, 90, 216, 0.5);
+    height: 100%;
+    width:100%;
+    text-align:center;
+
+ /* Adjust to 'contain' or '100% auto' based on your preference */
+    transition: all 0.5s ease;
+}
+
+  .sidebar{ 
+    grid-area: sidebar ;
+    overflow: hidden;
+
+}
+.ProfileIcon img{
+    position: relative;
+    width:50%;
+    height: 10%;
+    scale: 1.5;
+    border-radius: 50%;
+    object-fit: cover;
+    margin:20% 0 0 0;
+
+}
+.fourItems img
+{
+    position: relative;
+    width:80%;
+    height: 80%;
+    filter: drop-shadow(2px 2px 4px rgb(252, 250, 250));
+}
+.sidebar .ProfileIcon{
+    margin-bottom: 2%;
+
+}
+.fourItems{
+    margin:-200% 0% 0% 0%;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    gap:10%;
+    
+}
+
+  .Allchat {  
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "msgContainer Element-chat";
+    grid-area: Allchat;
+    overflow: hidden;
+  }
+
+  .Message-chat
+  {
+    grid-area: msgContainer; 
+    position: relative;
+    width:100%;
+    height:100%;  
+  }
+  .Room-chat
+  {
+    grid-area: msgContainer; 
+    position: relative;
+    width:100%;
+    height:100%;
+  }
+  .Element-chat{  
+    display: grid;
+    grid-template-columns: 2fr ;
+    grid-template-rows: 0.1fr 1.9fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header-chat InfoMsg"
+      "Input-conversation InfoMsg";
+    grid-area: Element-chat;
+
+  }
+
+
+  
+  .Element-chat{
+
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+
+
+  }
+  .Header-chat {
+    background-color: aqua;
+    display: grid;
+
+     grid-area: Header-chat; 
+    }
+  
+  .MsgInfo { 
+    display: grid;
+
+    position: relative;
+    width:100%;
+    height:100%;
+    grid-area: MsgInfo; 
+  }
+  
+  .Input-conversation{  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.9fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Conversation"
+      "send-bar";
+    grid-area: Input-conversation;
+
+   
+  }
+  
+  .send-bar { 
+    grid-area:send-bar;  
+     display: grid;
+
+    position: relative;
+    width:100%;
+    height:100%;
+}
+  
+  .Conversation { grid-area: Conversation;   display: grid;
+
+    position: relative;
+    width:100%;
+    height:100%;}
+  
+  .MessageIcon:hover , .RoomIcon:hover ,.NotifIcon:hover
+  {
+    background-color:  rgba(255, 228, 196,0.7);
+  }
+
+ 
